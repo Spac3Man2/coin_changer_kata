@@ -12,13 +12,13 @@ def correct_change(amount)
 
        coins = {}  
 
-	{:penny => 1, :nickel => 5, :dime => 10, :quater => 25}.each do |coins, value|
+	{:penny => 1, :nickel => 5, :dime => 10, :quater => 25}.each do |amount, value|
     
-      coins(change) = 0 if amount >= 0  
+      correct_change(amount) = 0 if amount >= 0  
 
-      (amount -= value; coins[change] += 1) while amount >= value
+      (amount -= value; coins += 1) while amount >= value
 
-end
+    end
 
     return correct_change(amount)
 end
